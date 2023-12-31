@@ -32,7 +32,7 @@ If you need help getting git/GitHub to work with RStudio see: [Happy Git and Git
 
 - [ ] 3. In `_bookdown.yml`, change YOUR GITHUB USERNAME to your GitHub username in the two places it appears.
 
-- [ ] 4. In `_bookdown.yml`, change YOUR GITHUB REPO to your GitHub repo name in the two places it appears.
+- [ ] 4. In `_bookdown.yml`, change YOUR GITHUB  to your GitHub repo name in the two places it appears.
 
 (Note that 3. and 4. provide links to the `.Rmd` files of your project for editing and viewing. If you move your `.Rmd` files you will need to update these file paths. Once your book is rendered, test that the edit (pen) and view (eye) buttons work.)
 

@@ -1,9 +1,9 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "NBA Play Style Evolution"
+author: "Abhay Kothari, Arsh Gulati, Fernando Garcia De Llano, Jash Desai, Jay Maniyar"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
+# Introduction
 
