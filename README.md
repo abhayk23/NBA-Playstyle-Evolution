@@ -1,8 +1,6 @@
 Has the NBA experienced a shift in playstyle from 2000-2009 to 2010-2019?
 
-This analysis examines playstyle evolution in Python using **hypothesis testing** and **ANOVA analysis**. Additionally, we conducted **time series analyses** to assess statistical trends over 20 years, and **KMeans clustering** to categorize players by playstyle and discern differences between decades.
-
-
+This analysis examines playstyle evolution in Python using **KMeans clustering**, **hypothesis testing**, **ANOVA analysis**, and **time series analyses**.
 
 **To access complete documentation and analysis, refer to** https://abhayk23.github.io/NBA-Playstyle-Evolution/
 
