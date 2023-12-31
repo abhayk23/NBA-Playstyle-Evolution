@@ -1,8 +1,4 @@
-- [ ] 2. Render locally with `bookdown::render_book("index.Rmd")` or clicking the *Build book* button which should appear in the Build tab (in the same pane as Environment, History, Connections, ...).
+Has the NBA experienced a shift in playstyle from 2000-2009 to 2010-2019?
 
-- [ ] 3. Use `browseURL("docs/index.html")` to view your book locally (or just open `index.html` in a browser).
-
-- [ ] 4. If it looks good, commit and push all changed files to GitHub. 
-
-(You will need to repeat steps 2 and 4 every time you wish to update the book online.)
+This analysis examines playstyle evolution using hypothesis testing and ANOVA analysis. Additionally, we conducted time series analyses to assess statistical trends over 20 years, and KMeans clustering to categorize players by playstyle and discern differences between decades.
 
