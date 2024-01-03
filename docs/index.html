@@ -23,7 +23,7 @@
 <meta name="author" content="Abhay Kothari, Arsh Gulati, Fernando Garcia De Llano, Jash Desai, Jay Maniyar" />
 
 
-<meta name="date" content="2024-01-02" />
+<meta name="date" content="2024-01-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,12 @@
 <ul>
 <li class="chapter" data-level="1.4.1" data-path="index.html"><a href="#regression-analysis"><i class="fa fa-check"></i><b>1.4.1</b> Regression Analysis</a></li>
 <li class="chapter" data-level="1.4.2" data-path="index.html"><a href="#hypothesis-testing-t-tests"><i class="fa fa-check"></i><b>1.4.2</b> Hypothesis Testing (T-Tests)</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="#hypothesis-testing-anova"><i class="fa fa-check"></i><b>1.4.3</b> Hypothesis Testing (ANOVA)</a></li>
+<li class="chapter" data-level="1.4.4" data-path="index.html"><a href="#time-series-analyses"><i class="fa fa-check"></i><b>1.4.4</b> Time Series Analyses</a></li>
+<li class="chapter" data-level="1.4.5" data-path="index.html"><a href="#k-means-cluster-analysis-dimensionality-reduction"><i class="fa fa-check"></i><b>1.4.5</b> K-Means Cluster Analysis &amp; Dimensionality Reduction</a></li>
 </ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="#discussion"><i class="fa fa-check"></i><b>1.5</b> Discussion</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="#references"><i class="fa fa-check"></i><b>1.6</b> References</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -114,7 +119,7 @@
 <div id="header">
 <h1 class="title">NBA Play Style Evolution</h1>
 <p class="author"><em>Abhay Kothari, Arsh Gulati, Fernando Garcia De Llano, Jash Desai, Jay Maniyar</em></p>
-<p class="date"><em>2024-01-02</em></p>
+<p class="date"><em>2024-01-03</em></p>
 </div>
 <div id="nba-play-style-evolution" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> NBA Play Style Evolution<a href="#nba-play-style-evolution" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -124,8 +129,8 @@
 </div>
 <div id="introduction" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Introduction<a href="#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There has long been a significant debate about which era stands as the best in NBA history. Since its inaugural season in 1946, the NBA has witnessed the rise and fall of various eras. These periods have been marked by numerous rule changes, the emergence of legendary players, and the formation of great teams. Yet, an interesting question remains: has there been a clear shift in playing style in the NBA over the years, particularly in recent times? Many argue that the contemporary league is characterized by lesser physicality, diminished defensive efforts, and an overreliance on three-point shooting at the expense of utilizing other skills (“The NBA is soft”, 2023). Current players often attribute these claims to changes in league rules and officiating implemented in recent years (Ganglani, 2023).</p>
-<p>Firstly, there haven’t been any studies which have clearly demonstrated a shift in playing style over recent years or across different eras. It is unclear as to the reasons behind the changes, whether attributed to alterations in rules, stricter officiating, coaching methods, or natural evolution. For instance, during the 1990s, three-point shooting was often viewed as a last-resort strategy, whereas today it is a cornerstone of a majority of game plans created (Ganglani, 2023). Through empirical analysis and data visualization, this paper seeks to determine whether discernible shifts in playing styles occurred between the periods of 2000-2009 and 2010-2019.</p>
+<p>There has long standing debate about which era stands as the best in NBA history. Since its inaugural season in 1946, the NBA has witnessed the rise and fall of multiple eras. These periods have been marked by numerous rule changes, the emergence of legendary players, and the formation of great teams. Yet, an interesting question remains: has there been a clear shift in playing style in the NBA over the years, particularly in recent times? Many argue that the contemporary league is characterized by lesser physicality, diminished defensive efforts, and an overreliance on three-point shooting at the expense of utilizing other skills (“The NBA is soft”, 2023). Current players often attribute these claims to changes in league rules and officiating implemented in recent years (Ganglani, 2023).</p>
+<p>Firstly, no studies have clearly demonstrated a shift in playing style over recent years or across different eras. It is unclear as to the reasons behind the changes, whether attributed to alterations in rules, stricter officiating, coaching methods, or natural evolution. For instance, during the 1990s, three-point shooting was often viewed as a last-resort strategy, whereas today it is a cornerstone of a majority of game plans created (Ganglani, 2023). Through empirical analysis and data visualization, this paper seeks to determine whether discernible shifts in playing styles occurred between the periods of 2000-2009 and 2010-2019.</p>
 <p>The structure of this paper is as follows. In section 2, we examine the methods used in our analysis, identify our main Key Performance Indicators (KPIs), and specify the data source for this paper. In section 3, we present our results, including all our findings and data visualizations for our KPIs. In section 4, we delve into a detailed discussion of our findings, summarize how they compare to existing studies, address the limitations of our analysis, and offer recommendations and insights.</p>
 <p>During our analysis, we referenced four articles related to era comparisons and changes in play style in the NBA. The first article, published by Bruin Sports Analytics and titled “How Can We Accurately Compare NBA Players Across Different Eras,” demonstrates how basketball has evolved over time using certain in-game variables (Wang, 2022). It provides a solid foundation for comparing players across different eras by adjusting statistics for easier comparison and assessing the relative dominance of players.</p>
 <p>The second referenced study is titled “The Decline of the Mid-Range Jump Shot in Basketball: A Study of the Impact of Data Analytics on Shooting Habits in the NBA.” This study offers insights into the evolution of shooting and three-pointers in the NBA (Kilcoyne, 2020). It provides context for shot selection across eras and discusses how data analysis has influenced the game’s evolution and changed play styles.</p>
@@ -140,7 +145,7 @@
 <h2><span class="header-section-number">1.3</span> Methods<a href="#methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="data-selection" class="section level3 hasAnchor" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> Data Selection<a href="#data-selection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We obtained NBA player statistics from the Basketball-Reference website, focusing on 23 key performance indicators (KPIs) listed in Section 2.2. Utilizing a Python program, we web-scraped data spanning the 1998-99 to 2021-22 seasons.</p>
+<p>We obtained NBA player statistics from the Basketball-Reference website, focusing on 23 key performance indicators (KPIs) listed in Section 1.2. Utilizing a Python program, we web-scraped data spanning the 1998-99 to 2021-22 seasons.</p>
 <p>Several columns (FG%, 3P%, 2P%, FT%, and eFG%) had missing values due to #DIV/0 errors, which we opted not to fill with mean values to preserve performance integrity. Our analysis centers on playstyles, so we assessed players with a significant number of games, setting a lower limit of 22 games (25th percentile of GP). To ensure robust analysis, players averaging zero field goals (FG) or playing more than 82 games in a season were excluded.</p>
 <p>The Position column revealed 17 positions, with 12 being hybrid. The Team column introduced “TOT,” representing combined statistics for players on multiple teams. To address these complexities, we created four data frames:</p>
 <ol style="list-style-type: decimal">
@@ -170,9 +175,137 @@
 <div id="hypothesis-testing-t-tests" class="section level3 hasAnchor" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Hypothesis Testing (T-Tests)<a href="#hypothesis-testing-t-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We conducted a total of 36 two-tailed t-tests to evaluate our hypotheses. Between Decade 1 and Decade 2, we compared the following statistics: Field Goal Percentage (FG%), 3-Points Attempted (3PA), 3-Points Made (3PM), 3-Point Percentage (3P%), 2-Points Attempted (2PA), 2-Points Made (2PM), 2-Point Percentage (2P%), Free Throws Attempted (FTA), Free Throws Made (FTM), Free Throw Percentage (FT%), Total Rebounds (TRB), Assists (AST), Steals (STL), Blocks (BLK), and Personal Fouls (PF). Refer to Table 1 for significant statistics.</p>
-<p><img src="https://lh7-us.googleusercontent.com/8kPvbcWkgGdHPDwUxFz7wO5kuTOMnZSdbUtWbjG6orbv0as--pdwUj9LqpXO0iGwoQU-3fOnbQeADexeYrbwQNzEgn-DiR1311XgeA29DIJtw1nc78ftqk6jYdu1shYnqNfAdJ_5jQDMtHIdv2_-Fy0" /><sub>Decade 1 vs. Decade 2 Signifiicant Variables, <strong>Table 1</strong></sub></p>
-
+<p><img src="https://lh7-us.googleusercontent.com/8kPvbcWkgGdHPDwUxFz7wO5kuTOMnZSdbUtWbjG6orbv0as--pdwUj9LqpXO0iGwoQU-3fOnbQeADexeYrbwQNzEgn-DiR1311XgeA29DIJtw1nc78ftqk6jYdu1shYnqNfAdJ_5jQDMtHIdv2_-Fy0" /> <sub>Decade 1 vs. Decade 2 Signifiicant Variables, <strong>Table 1</strong></sub></p>
+<p>To analyze the growing popularity of the 3-point shot, we conducted tests comparing the five major positions (PG, SG, SF, PF, C) from Decade 1 to the same positions from Decade 2 on three metrics: 3PA, 3PM, and 3P%. The results revealed significant statistics for 3PA, 3PM, and 3P% across all five positions.</p>
+<p>Furthermore, consistent with the hypothesis suggesting that players are becoming more versatile, we conducted a series of “Small-Ball” t-tests. These tests compared PGs and SGs from Decade 1 to PGs and SGs from Decade 2 based on blocks (BLK) and rebounds (TRB). Similarly, we compared PFs and Cs from Decade 1 to PFs and Cs from Decade 2 on Assists (AST). For significant statistics, please refer to Table 2.</p>
+<p><img src="https://lh7-us.googleusercontent.com/9zcUjGg4-fVJPvADaGlrdV3B0MQ-U7te_-CXoSLQC2AMmYnHwvrwheFIT4HPgE_FftOXMIJBOJCTaNB_ocM06vxbmj6yr-U55rWDkT5D3EnM6JVzL6OYyVRKhQeh1IM4lX94YjrjZ6nARF9n6xzMMv4" /></p>
+<p><sub>Positional Decade 1 vs. Decade 2 Signifiicant Variables, <strong>Table 2</strong></sub></p>
 </div>
+<div id="hypothesis-testing-anova" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Hypothesis Testing (ANOVA)<a href="#hypothesis-testing-anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We began our ANOVA analysis by dividing the “StartingYear” column into four distinct periods: 2000-2004, 2005-2009, 2010-2014, and 2015-2019. This segmentation allowed us to compare the differences in means for variables that were identified as statistically significant through our t-tests. To accomplish this, we utilized the <strong>pd.cut()</strong> function from the Python pandas library to categorize the years into the respective periods. Subsequently, we conducted ANOVA for the following variables: 3-Points Made (3PM), 3-Point Percentage (3P%), Free Throw Attempts (FTA), 2-Point Percentage (2P%), Free Throws Made (FT), Free Throw Percentage (FT%), Personal Fouls.</p>
+<p>Furthermore, to identify the specific periods contributing to the variance in means for personal fouls, we conducted a post hoc analysis using pairwise t-tests between the different periods. To address the increased risk of Type I error associated with multiple comparisons, we implemented the Bonferroni correction to adjust the significance level for each individual t-test. Our findings, visualized in Figure 1, indicated significant differences between the second period (2005-2009) and the third period (2010-2014).</p>
+<p><img src="https://lh7-us.googleusercontent.com/VmhN6yigvox5PHHkGmR_bgm-NObY08Axn5fPOcNHt9_8SZBeCsrRzuCwybSKvC1IklKNYXW0w8eL_fOAIYN-yqeUX-WJGVT35oPfior9LUYQyzz4pUuA83bF6Spbbv_UMg4DmY2pdLyPHyG8xH-P-y0" /></p>
+<p><sub><strong>(Figure 1)</strong></sub></p>
+</div>
+<div id="time-series-analyses" class="section level3 hasAnchor" number="1.4.4">
+<h3><span class="header-section-number">1.4.4</span> Time Series Analyses<a href="#time-series-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To visually present our findings to the audience, we created time-series graphs to illustrate trends in 3PM and 3PA between Decade 1 and Decade 2 (Figure 2). These graphs highlighted interesting trends in 3PM for the entire league and specifically for Stephen Curry since his draft (Figure 3). Additionally, one graph showcased trends in 3P%, 2P%, and FG% between the two decades (Figure 4), while another visualized the relationship between FT and FTA over the same period (FIgure 5). To conclude our analysis, we generated a line chart that depicted a 1% increase in FT% between the two decades (Figure 6) and a bar chart that illustrated the ANOVA post hoc analysis conducted on Personal Fouls (Figure 1).</p>
+<p><img src="images/StephCurry_3PM_Graph-01.png" /></p>
+<p><sub><strong>(Figure 2)</strong></sub></p>
+<p><img src="https://lh7-us.googleusercontent.com/JlvDP8smsJV755ruLSf-VcgJkkPfn97M8LZDrDxO1WsP4L0_i2W9NwBsbJh2pKHl8S1lmRuruT1ZtxMvFcXyOjjT_iazsqKLLSIJjaoVDqlFJ0Y_CL-X5_umdZHruaXZEkM5v62lW2KbYzxQQgdTsvU" /></p>
+<p><sub><strong>(Figure 3)</strong></sub></p>
+<p><img src="images/Percentages_Graph-01.png" /></p>
+<p><sub><strong>(Figure 4)</strong></sub></p>
+<p><img src="images/FTA_FTM_Graph.png" /></p>
+<p><sub><strong>(Figure 5)</strong></sub></p>
+<p><img src="images/FTPercentage_Graph.png" /></p>
+<p><sub><strong>(Figure 6)</strong></sub></p>
+</div>
+<div id="k-means-cluster-analysis-dimensionality-reduction" class="section level3 hasAnchor" number="1.4.5">
+<h3><span class="header-section-number">1.4.5</span> K-Means Cluster Analysis &amp; Dimensionality Reduction<a href="#k-means-cluster-analysis-dimensionality-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the exploration of play styles, we conducted a cluster analysis to classify players based on personal performance. To aid in the subsequent analysis, we performed dimensionality reduction using Principal Component Analysis (PCA).</p>
+<p>For Decade 1 (2000-2009), PC1 revealed substantial loading on offensive metrics (e.g., FG, PTS, 2P, FT), as outlined in Table 3. PC2 highlighted significant loading on rebounding, defensive metrics, and shooting percentages (e.g., ORB, TRB, BLK, FG%), as outlined in Table 4.</p>
+<p><img src="images/PCALoadingsD1-01.png" width="220" /></p>
+<p><sub>PCA Loading - Decade 1, <strong>Table 3</strong></sub></p>
+<p><img src="images/PCALoadingsD2.png" width="220" /></p>
+<p><sub>PCA Loading - Decade 2, <strong>Table 4</strong></sub></p>
+<p>In Decade 2 (2010-2019), Table 4 indicated that PC1 exhibited loading patterns akin to Decade 1, emphasizing offensive statistics. Similar to Decade 1, PC2 in Table 2 showcased loading on rebounding, defensive stats, and shooting percentages. The cumulative variance of the first three PCs, as presented in Table 5, reached 77.50%, surpassing the threshold of 70%. The cumulative variance of the first three PCs, as shown in Table 6, reached 75.91%, meeting the 70% threshold. Therefore, we chose to use 3 PCs for both decades. These initial interpretations proved to be vital as we were able to use the first two PCs as the x-axis and y-axis for our K-Means scatterplot to plot all of Decade 1 and Decade 2 players along each PC.</p>
+<p><img src="images/PCAVarianceD1-02.png" /></p>
+<p><sub>PC Variance - Decade 1, <strong>Table 5</strong></sub></p>
+<p><img src="images/PCAVarianceD2.png" /></p>
+<p><sub>PC Variance - Decade 2, <strong>Table 6</strong></sub></p>
+<p>We created an elbow plot and a silhouette plot for each decade to evaluate cluster validity. Decade 1 suggested 4 clusters, as detailed in Figure 7. On the other hand, Decade 2 exhibited some ambiguity (3 clusters by silhouette plot, 4 by elbow plot). Despite the discrepancy, the decision was made to opt for 4 clusters for both decades to make comparisons easier between the two decades. </p>
+<p><img src="images/Elbow_Plot_Decade1-03.png" width="481" /></p>
+<p><img src="images/Silhouette_Plot_Decade1-03.png" width="481" /></p>
+<p><sub>Elbow and Silhouette Plots - Decade 1, <strong>Figure 7</strong></sub></p>
+<p><img src="images/Elbow_Plot_Decade2-02.png" width="479" /></p>
+<p><img src="images/Silhouette_Plot_Decade2-03.png" width="481" /></p>
+<p><sub>Elbow and Silhouette Plots - Decade 2, <strong>Figure 8</strong></sub></p>
+<p>To visualize the 4 clusters per decade, scatter plots were generated, aligning with the PCA results. Each plot graphed 4 NBA player categories against 2 principal components. Generally, PC1 exhibited more loading on offensive statistics (FGA, 3PA, 2PA), while PC2 emphasized rebounding and defensive statistics (TRB, BLK, FG%). The details of these plots provide a good understanding of the play style clusters across the two decades.</p>
+<p><img src="images/Cluster_Analysis_Scatter_Plot_Decade1-01.png" /></p>
+<p><sub>Cluster Scatter Plot - Decade 1, <strong>Figure 9</strong></sub></p>
+<p><img src="images/Cluster_Analysis_Scatter_Plot_Decade2-01.png" /></p>
+<p><sub>Cluster Scatter Plot - Decade 2, <strong>Figure 10</strong></sub></p>
+<p>To derive meaningful interpretations for each cluster, we calculated the mean for each statistic within each cluster, as presented in Table 7 and Table 8.</p>
+<p><img src="https://lh7-us.googleusercontent.com/JrUbAv_h7ma7oHBc1QjKH9RReWDYyQA4dyfS1zLNEWIhLWmEIsl2z7vgBtAVFIoJj9xcI9c0MQByD_ZgLsCWEJbuZtVgb8rDzFiyjo36wczoeECgC4cSMaeGZcRk5W8sqqD2UBCnEksTqhRh4BR_q5Y" /></p>
+<p><sub>Cluster Averages Table - Decade 1, <strong>Table 7</strong></sub></p>
+<p>Here are the interpretations for each cluster in Decade 1.</p>
+<p>The Bench Warmer (Cluster 0)</p>
+<ul>
+<li>Players in Cluster 0 provide moderate scoring (4.56 PTS) and lack defensive prowess, coming in last for STL and BLK.</li>
+</ul>
+<p>The Best Player (Cluster 1)</p>
+<ul>
+<li><p>Players in this cluster will likely be the star, scoring 20+PTS and leading the clusters in AST, TRB, STL, and 2PA.</p></li>
+<li><p>Cluster Player Example: <strong>Kobe Bryant</strong></p></li>
+</ul>
+<p>Sharpshooter (Cluster 2)</p>
+<ul>
+<li><p>Players in this cluster contribute moderately in points, excel in 3-point shooting accuracy (1st in 3P%), and have decent AST and STL averages.</p></li>
+<li><p>Cluster Player Example: <strong>Steve Nash</strong></p></li>
+</ul>
+<p>Big Man (Cluster 3)</p>
+<ul>
+<li>Players in this cluster came in 1st for BLK, 1st in 2P%, and 2nd in TRB, but lacked heavily in 3-Point shooting accuracy (12.6%)</li>
+</ul>
+<p><img src="images/clipboard-3331446244.png" /></p>
+<p><sub>Cluster Averages Table - Decade 2, <strong>Table 8</strong></sub></p>
+<p>Here are the interpretations for each cluster in Decade 2.</p>
+<p>The Best Player (Cluster 0)</p>
+<ul>
+<li><p>Players in Cluster 0 excel in scoring (20.6 PTS), with a balanced game having high averages for assists, rebounds, steals, and FT%</p></li>
+<li><p>Cluster Player Example: <strong>Kevin Durant</strong></p></li>
+</ul>
+<p>The Bench Warmer (Cluster 1)</p>
+<ul>
+<li>Players in this cluster demonstrate decent 3-point shooting but average last in PTS, AST, TRB, BLK, and STL. </li>
+</ul>
+<p>Sharpshooter (Cluster 2)</p>
+<ul>
+<li><p>This cluster represents well-rounded players, scoring 11.33 points (2nd), 0.89 steals (2nd), 1st in 3P%, </p></li>
+<li><p>Cluster Player Example: <strong>Ray Allen</strong></p></li>
+</ul>
+<p>Big Man (Cluster 3)</p>
+<ul>
+<li><p>Players in Cluster 3 led averages for BLK, TRB, and 2P% and came 2nd for 2PA, FTA.</p></li>
+<li><p>Lacking in 3P and FT shooting accuracy (16.6%) and (68.7%)</p></li>
+</ul>
+<p>In general, roles in the NBA have remained consistent across both Decade 1 and Decade 2, featuring distinct clusters like Lead Scorer, Big Man, and Sharpshooter. However, players are showcasing versatility beyond traditional positions. In Decade 2, the ‘Big Man’ cluster stands out with higher averages in assists, 3PA, and a 4% increase in 3P% compared to Decade 1. The ‘Sharpshooter’ cluster in Decade 2 exhibits higher total rebounds and blocks averages. Across all clusters, there’s a noticeable increase in average 3PA. These observations suggest a shift in traditional role responsibilities and skill sets.</p>
+</div>
+</div>
+<div id="discussion" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Discussion<a href="#discussion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section discusses key takeaways and observations from our analysis, focusing on the evolution of the NBA between 2000-2009 and 2010-2019. While our approach aligns with existing literature on player comparisons and positional evolution, our unique perspective examines the NBA holistically across all positions during these two decades.</p>
+<p>However, our study has limitations, including not accounting for coaching styles, advancements in nutritional science affecting player conditioning, rule changes, and technological innovations like player analytics (Sorensen, 2019; Dutta, 2021).</p>
+<p><strong>A few notable findings emerge from our analysis:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>General roles in the NBA, such as Lead Scorer, Big Man, and Sharp Shooter, have not changed.</p></li>
+<li><p>Traditional positional distinctions have blurred, with players becoming more versatile across roles.</p></li>
+<li><p>Players have gotten better. Their shot-making ability has significantly improved, as suggested by the 2P%, 3P%, and FG% increase over both decades.</p></li>
+<li><p>The significance of 3-point shooting has grown, with all related 3-point statistics showing a notable increase across all positions.</p></li>
+<li><p>The decline in personal fouls indicates a shift towards a less physical style of play.</p></li>
+<li><p>The decline in Free Throw Attempts aligns with the reduction in personal fouls, highlighting the ever-changing scoring dynamics.</p></li>
+</ol>
+<p>Our findings support a clear shift in NBA play style, prompting us to reject our null hypothesis. This shift suggests a future NBA with more multi-skilled players, challenging the focus on designated role responsibilities for each position.</p>
+</div>
+<div id="references" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> References<a href="#references" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Basketball Statistics &amp; History of Every Team &amp; NBA and WNBA Players. Basketball. (n.d.). <a href="https://www.basketball-reference.com/" class="uri">https://www.basketball-reference.com/</a> </p>
+<p>Dutta, P. (2021, August 26). How data analytics is changing the sport of Basketball &amp; the NBA. Medium. <a href="https://medium.com/@pratyushdutta29/how-data-analytics-is-changing-the-sport-of-basketball-the-nba-f85aa31e9ebb">https://medium.com/@pratyushdutta29/how-data-analytics-is-changing-the-sport-of-basketball-the-nba-f85aa31e9ebb</a> </p>
+<p>Fenichel, A. (2022, July 15). The modernization of NBA offenses and why small ball is here to stay. The Analyst. <a href="https://theanalyst.com/na/2021/03/the-modernization-of-nba-offenses-and-why-small-ball-is-here-to-stay/" class="uri">https://theanalyst.com/na/2021/03/the-modernization-of-nba-offenses-and-why-small-ball-is-here-to-stay/</a></p>
+<p>Fuller, E. (2022, July 20). How sports nutrition and biometrics are evolving NBA training. BasketballNews.com. <a href="https://www.basketballnews.com/stories/biometrics-and-boot-camp-inside-todays-world-nba-predraft-training-josh-green-zeke-nnaji-blake-wesley-joe-abunassar-isaac-mourier" class="uri">https://www.basketballnews.com/stories/biometrics-and-boot-camp-inside-todays-world-nba-predraft-training-josh-green-zeke-nnaji-blake-wesley-joe-abunassar-isaac-mourier</a> </p>
+<p>Ganglani, N. (2023, February 20). “just because we don’t get into fights, they think we’re soft …”  Basketball Network. <a href="https://www.basketballnetwork.net/latest-news/current-nba-players-slam-the-old-generation-for-thinking-todays-league-is-soft" class="uri">https://www.basketballnetwork.net/latest-news/current-nba-players-slam-the-old-generation-for-thinking-todays-league-is-soft</a></p>
+<p>Goldsberry, K. (2019, May 2). How mapping shots in the NBA changed it forever. FiveThirtyEight.com. <a href="https://fivethirtyeight.com/features/how-mapping-shots-in-the-nba-changed-it-forever/" class="uri">https://fivethirtyeight.com/features/how-mapping-shots-in-the-nba-changed-it-forever/</a> </p>
+<p>Haefner, J. (n.d.). This unique defensive strategy and technique stops 3-point shooting dead in its tracks. breakthroughbasketball.com. <a href="https://www.breakthroughbasketball.com/defense/sneaky-23zone-tip.html" class="uri">https://www.breakthroughbasketball.com/defense/sneaky-23zone-tip.html</a> </p>
+<p>Kilcoyne, S. (2020, November). The Decline of the Mid-Range Jump Shot in Basketball: A Study of the Impact of Data Analytics on Shooting Habits in the NBA. Digital Commons Bryant University.<a href="https://digitalcommons.bryant.edu/cgi/viewcontent.cgi?article=1034&amp;context=honors_mathematics" class="uri">https://digitalcommons.bryant.edu/cgi/viewcontent.cgi?article=1034&amp;context=honors_mathematics</a></p>
+<p>Martin, C. (2020, August 6). How important is versatility in the NBA?. sportsbet.io. <a href="https://sportsbet.io/sports/basketball/news/how-important-is-versatility-in-the-nba" class="uri">https://sportsbet.io/sports/basketball/news/how-important-is-versatility-in-the-nba</a> </p>
+<p>Madabhushi, A., &amp; Zhang, A. (2022, December 13). How effective is small ball?. Bruin Sports Analytics. <a href="https://www.bruinsportsanalytics.com/post/small-ball-analysis" class="uri">https://www.bruinsportsanalytics.com/post/small-ball-analysis</a></p>
+<p>Powell, S. (2022, September 22). Stephen Curry reached “his own level” and left behind a new-look NBA. NBA.com. <a href="https://www.nba.com/news/stephen-curry-changed-game-long-before-3-point-milestone" class="uri">https://www.nba.com/news/stephen-curry-changed-game-long-before-3-point-milestone</a> </p>
+<p>Sorensen, M. (2019, February 21). NBA rules have adapted over the years to make the game more fun for players, fans. Deseret News. <a href="https://www.deseret.com/2019/2/21/20666425/nba-rules-have-adapted-over-the-years-to-make-the-game-more-fun-for-players-fans" class="uri">https://www.deseret.com/2019/2/21/20666425/nba-rules-have-adapted-over-the-years-to-make-the-game-more-fun-for-players-fans</a> </p>
+<p>The NBA is soft. The Bona Venture. (2023, March 30). <a href="https://www.thebvnewspaper.com/2023/03/31/the-nba-is-soft/" class="uri">https://www.thebvnewspaper.com/2023/03/31/the-nba-is-soft/</a></p>
+<p>Wang, D. (2022, December 13). How can we accurately compare NBA players across different eras?. Bruin Sports Analytics. <a href="https://www.bruinsportsanalytics.com/post/nba-era-comparisons" class="uri">https://www.bruinsportsanalytics.com/post/nba-era-comparisons</a> </p>
+
 </div>
 </div>
             </section>

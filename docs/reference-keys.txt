@@ -8,3 +8,8 @@ statistical-analyses
 results
 regression-analysis
 hypothesis-testing-t-tests
+hypothesis-testing-anova
+time-series-analyses
+k-means-cluster-analysis-dimensionality-reduction
+discussion
+references
