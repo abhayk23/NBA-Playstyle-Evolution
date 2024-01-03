@@ -125,15 +125,15 @@ In the exploration of play styles, we conducted a cluster analysis to classify p
 
 For Decade 1 (2000-2009), PC1 revealed substantial loading on offensive metrics (e.g., FG, PTS, 2P, FT), as outlined in Table 3. PC2 highlighted significant loading on rebounding, defensive metrics, and shooting percentages (e.g., ORB, TRB, BLK, FG%), as outlined in Table 4.
 
-![](images/PCALoadingsD1-01.png){width="220"}
+![](images/PCALoadingsD1.png){width="307"}
 
-~PCA Loading - Decade 1, **Table 3**~
+~PCA Loadings - Decade 1, **Table 3**~
 
-![](images/PCALoadingsD2.png){width="220"}
+![](images/PCALoadingsD2.png){width="307"}
 
-~PCA Loading - Decade 2, **Table 4**~
+~PCA Loadings - Decade 2, **Table 4**~
 
-In Decade 2 (2010-2019), Table 4 indicated that PC1 exhibited loading patterns akin to Decade 1, emphasizing offensive statistics. Similar to Decade 1, PC2 in Table 2 showcased loading on rebounding, defensive stats, and shooting percentages. The cumulative variance of the first three PCs, as presented in Table 5, reached 77.50%, surpassing the threshold of 70%. The cumulative variance of the first three PCs, as shown in Table 6, reached 75.91%, meeting the 70% threshold. Therefore, we chose to use 3 PCs for both decades. These initial interpretations proved to be vital as we were able to use the first two PCs as the x-axis and y-axis for our K-Means scatterplot to plot all of Decade 1 and Decade 2 players along each PC.
+In Decade 2 (2010-2019), Table 4 indicates that PC1 exhibits loading patterns akin to Decade 1, emphasizing offensive statistics. Similar to Decade 1, PC2 in Table 2 showcases loading on rebounding, defensive stats, and shooting percentages. The cumulative variance of the first three PCs, as presented in Table 5, reaches 77.50%, surpassing the threshold of 70%. The cumulative variance of the first three PCs, as shown in Table 6, reaches 75.91%, surpassing the 70% threshold. Therefore, we chose to use 3 PCs for both decades. These initial interpretations proved to be vital as we were able to use the first two PCs as the x-axis and y-axis for our K-Means scatterplot to plot all of Decade 1 and Decade 2 players along each PC.
 
 ![](images/PCAVarianceD1-02.png)
 
@@ -145,21 +145,21 @@ In Decade 2 (2010-2019), Table 4 indicated that PC1 exhibited loading patterns a
 
 We created an elbow plot and a silhouette plot for each decade to evaluate cluster validity. Decade 1 suggested 4 clusters, as detailed in Figure 7. On the other hand, Decade 2 exhibited some ambiguity (3 clusters by silhouette plot, 4 by elbow plot). Despite the discrepancy, the decision was made to opt for 4 clusters for both decades to make comparisons easier between the two decades. 
 
-![](images/Elbow_Plot_Decade1-03.png){width="481"}
+![](images/Elbow_Plot_Decade1.png){width="591"}
 
-![](images/Silhouette_Plot_Decade1-03.png){width="481"}
+![](images/Silhouette_Plot_Decade1.png){width="591"}
 
 ~Elbow and Silhouette Plots - Decade 1, **Figure 7**~
 
-![](images/Elbow_Plot_Decade2-02.png){width="479"}
+![](images/Elbow_Plot_Decade2.png){width="591"}
 
-![](images/Silhouette_Plot_Decade2-03.png){width="481"}
+![](images/Silhouette_Plot_Decade2.png){width="591"}
 
 ~Elbow and Silhouette Plots - Decade 2, **Figure 8**~
 
 To visualize the 4 clusters per decade, scatter plots were generated, aligning with the PCA results. Each plot graphed 4 NBA player categories against 2 principal components. Generally, PC1 exhibited more loading on offensive statistics (FGA, 3PA, 2PA), while PC2 emphasized rebounding and defensive statistics (TRB, BLK, FG%). The details of these plots provide a good understanding of the play style clusters across the two decades.
 
-![](images/Cluster_Analysis_Scatter_Plot_Decade1-01.png)
+![](images/Cluster_Analysis_Scatter_Plot_Decade1.png)
 
 ~Cluster Scatter Plot - Decade 1, **Figure 9**~
 
@@ -167,60 +167,55 @@ To visualize the 4 clusters per decade, scatter plots were generated, aligning w
 
 ~Cluster Scatter Plot - Decade 2, **Figure 10**~
 
-To derive meaningful interpretations for each cluster, we calculated the mean for each statistic within each cluster, as presented in Table 7 and Table 8.
+To derive meaningful interpretations for each cluster, we calculated the mean for each statistic within each cluster, as presented in Table 7 and Table 8. We then classified each cluster into a player mold, and identified key player examples from notable clusters.
+
+Here are the interpretations for each cluster in Decade 1.
 
 ![](https://lh7-us.googleusercontent.com/JrUbAv_h7ma7oHBc1QjKH9RReWDYyQA4dyfS1zLNEWIhLWmEIsl2z7vgBtAVFIoJj9xcI9c0MQByD_ZgLsCWEJbuZtVgb8rDzFiyjo36wczoeECgC4cSMaeGZcRk5W8sqqD2UBCnEksTqhRh4BR_q5Y)
 
 ~Cluster Averages Table - Decade 1, **Table 7**~
 
-Here are the interpretations for each cluster in Decade 1.
-
-The Bench Warmer (Cluster 0)
+[The Bench Warmer (Cluster 0)]{.underline}
 
 -   Players in Cluster 0 provide moderate scoring (4.56 PTS) and lack defensive prowess, coming in last for STL and BLK.
 
-The Best Player (Cluster 1)
+[The Best Player (Cluster 1)]{.underline}
 
 -   Players in this cluster will likely be the star, scoring 20+PTS and leading the clusters in AST, TRB, STL, and 2PA.
-
 -   Cluster Player Example: **Kobe Bryant**
 
-Sharpshooter (Cluster 2)
+[Sharpshooter (Cluster 2)]{.underline}
 
 -   Players in this cluster contribute moderately in points, excel in 3-point shooting accuracy (1st in 3P%), and have decent AST and STL averages.
-
 -   Cluster Player Example: **Steve Nash**
 
-Big Man (Cluster 3)
+[Big Man (Cluster 3)]{.underline}
 
 -   Players in this cluster came in 1st for BLK, 1st in 2P%, and 2nd in TRB, but lacked heavily in 3-Point shooting accuracy (12.6%)
+
+Here are the interpretations for each cluster in Decade 2.
 
 ![](images/clipboard-3331446244.png)
 
 ~Cluster Averages Table - Decade 2, **Table 8**~
 
-Here are the interpretations for each cluster in Decade 2.
-
-The Best Player (Cluster 0)
+[The Best Player (Cluster 0)]{.underline}
 
 -   Players in Cluster 0 excel in scoring (20.6 PTS), with a balanced game having high averages for assists, rebounds, steals, and FT%
-
 -   Cluster Player Example: **Kevin Durant**
 
-The Bench Warmer (Cluster 1)
+[The Bench Warmer (Cluster 1)]{.underline}
 
 -   Players in this cluster demonstrate decent 3-point shooting but average last in PTS, AST, TRB, BLK, and STL. 
 
-Sharpshooter (Cluster 2)
+[Sharpshooter (Cluster 2)]{.underline}
 
 -   This cluster represents well-rounded players, scoring 11.33 points (2nd), 0.89 steals (2nd), 1st in 3P%, 
-
 -   Cluster Player Example: **Ray Allen**
 
-Big Man (Cluster 3)
+[Big Man (Cluster 3)]{.underline}
 
 -   Players in Cluster 3 led averages for BLK, TRB, and 2P% and came 2nd for 2PA, FTA.
-
 -   Lacking in 3P and FT shooting accuracy (16.6%) and (68.7%)
 
 In general, roles in the NBA have remained consistent across both Decade 1 and Decade 2, featuring distinct clusters like Lead Scorer, Big Man, and Sharpshooter. However, players are showcasing versatility beyond traditional positions. In Decade 2, the 'Big Man' cluster stands out with higher averages in assists, 3PA, and a 4% increase in 3P% compared to Decade 1. The 'Sharpshooter' cluster in Decade 2 exhibits higher total rebounds and blocks averages. Across all clusters, there's a noticeable increase in average 3PA. These observations suggest a shift in traditional role responsibilities and skill sets.
@@ -231,7 +226,7 @@ This section discusses key takeaways and observations from our analysis, focusin
 
 However, our study has limitations, including not accounting for coaching styles, advancements in nutritional science affecting player conditioning, rule changes, and technological innovations like player analytics (Sorensen, 2019; Dutta, 2021).
 
-**A few notable findings emerge from our analysis:**
+[**A few notable findings emerge from our analysis:**]{.underline}
 
 1.  General roles in the NBA, such as Lead Scorer, Big Man, and Sharp Shooter, have not changed.
 
