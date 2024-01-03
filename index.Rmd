@@ -19,6 +19,8 @@ Firstly, no studies have clearly demonstrated a shift in playing style over rece
 
 The structure of this paper is as follows. In section 1.3, we examine the methods used in our analysis, identify our main Key Performance Indicators (KPIs), and specify the data source for this paper. In section 1.4, we present our results, including all our findings and data visualizations for our KPIs. In section 1.5, we delve into a detailed discussion of our findings, summarize how they compare to existing studies, address the limitations of our analysis, and offer recommendations and insights.
 
+### Literature Review
+
 During our analysis, we referenced four articles related to era comparisons and changes in play style in the NBA. The first article, published by Bruin Sports Analytics and titled “How Can We Accurately Compare NBA Players Across Different Eras,” demonstrates how basketball has evolved over time using certain in-game variables (Wang, 2022). It provides a solid foundation for comparing players across different eras by adjusting statistics for easier comparison and assessing the relative dominance of players.
 
 The second referenced study is titled “The Decline of the Mid-Range Jump Shot in Basketball: A Study of the Impact of Data Analytics on Shooting Habits in the NBA.” This study offers insights into the evolution of shooting and three-pointers in the NBA (Kilcoyne, 2020). It provides context for shot selection across eras and discusses how data analysis has influenced the game's evolution and changed play styles.
