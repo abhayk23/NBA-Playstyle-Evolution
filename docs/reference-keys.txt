@@ -1,1 +1,10 @@
 nba-play-style-evolution
+abstract
+introduction
+methods
+data-selection
+kpis
+statistical-analyses
+results
+regression-analysis
+hypothesis-testing-t-tests
