@@ -1,8 +1,8 @@
-- [ ] 2. Render locally with `bookdown::render_book("index.Rmd")` or clicking the *Build book* button which should appear in the Build tab (in the same pane as Environment, History, Connections, ...).
+Has the NBA experienced a shift in playstyle from 2000-2009 to 2010-2019?
 
-- [ ] 3. Use `browseURL("docs/index.html")` to view your book locally (or just open `index.html` in a browser).
+This analysis examines playstyle evolution in Python using K-Means clustering, hypothesis testing, ANOVA analysis, and time series analyses.
 
-- [ ] 4. If it looks good, commit and push all changed files to GitHub. 
+To access complete documentation and analysis, refer to https://abhayk23.github.io/NBA-Playstyle-Evolution/
 
-(You will need to repeat steps 2 and 4 every time you wish to update the book online.)
+This repo was initially generated from a bookdown template available here: https://github.com/jtr13/bookdown-template.
 

@@ -1,4 +1,4 @@
---- 
+---
 title: "NBA Play Style Evolution"
 subtitle: "An empirical analysis of how NBA play style has changed over time."
 author: "Abhay Kothari, Arsh Gulati, Fernando Garcia De Llano, Jash Desai, Jay Maniyar"
@@ -6,5 +6,4 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Introduction
-
+# NBA Play Style Evolution
