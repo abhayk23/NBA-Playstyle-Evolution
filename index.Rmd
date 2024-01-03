@@ -101,23 +101,23 @@ To visually present our findings to the audience, we created time-series graphs 
 
 ![](images/StephCurry_3PM_Graph-01.png)
 
-~**(Figure\ 2)**~
+~**(Figure 2)**~
 
 ![](https://lh7-us.googleusercontent.com/JlvDP8smsJV755ruLSf-VcgJkkPfn97M8LZDrDxO1WsP4L0_i2W9NwBsbJh2pKHl8S1lmRuruT1ZtxMvFcXyOjjT_iazsqKLLSIJjaoVDqlFJ0Y_CL-X5_umdZHruaXZEkM5v62lW2KbYzxQQgdTsvU)
 
-~**(Figure\ 3)**~
+~**(Figure 3)**~
 
 ![](images/Percentages_Graph-01.png)
 
-~**(Figure\ 4)**~
+~**(Figure 4)**~
 
 ![](images/FTA_FTM_Graph.png)
 
-~**(Figure\ 5)**~
+~**(Figure 5)**~
 
 ![](images/FTPercentage_Graph.png)
 
-~**(Figure\ 6)**~
+~**(Figure 6)**~
 
 ### K-Means Cluster Analysis & Dimensionality Reduction
 
@@ -127,21 +127,21 @@ For Decade 1 (2000-2009), PC1 revealed substantial loading on offensive metrics 
 
 ![](images/PCALoadingsD1-01.png){width="220"}
 
-~PCA\ Loading\ -\ Decade\ 1,\ **Table\ 3**~
+~PCA Loading - Decade 1, **Table 3**~
 
 ![](images/PCALoadingsD2.png){width="220"}
 
-~PCA\ Loading\ -\ Decade\ 2,\ **Table\ 4**~
+~PCA Loading - Decade 2, **Table 4**~
 
 In Decade 2 (2010-2019), Table 4 indicated that PC1 exhibited loading patterns akin to Decade 1, emphasizing offensive statistics. Similar to Decade 1, PC2 in Table 2 showcased loading on rebounding, defensive stats, and shooting percentages. The cumulative variance of the first three PCs, as presented in Table 5, reached 77.50%, surpassing the threshold of 70%. The cumulative variance of the first three PCs, as shown in Table 6, reached 75.91%, meeting the 70% threshold. Therefore, we chose to use 3 PCs for both decades. These initial interpretations proved to be vital as we were able to use the first two PCs as the x-axis and y-axis for our K-Means scatterplot to plot all of Decade 1 and Decade 2 players along each PC.
 
 ![](images/PCAVarianceD1-02.png)
 
-~PC\ Variance\ -\ Decade\ 1,\ **Table\ 5**~
+~PC Variance - Decade 1, **Table 5**~
 
 ![](images/PCAVarianceD2.png)
 
-~PC\ Variance\ -\ Decade\ 2,\ **Table\ 6**~
+~PC Variance - Decade 2, **Table 6**~
 
 We created an elbow plot and a silhouette plot for each decade to evaluate cluster validity. Decade 1 suggested 4 clusters, as detailed in Figure 7. On the other hand, Decade 2 exhibited some ambiguity (3 clusters by silhouette plot, 4 by elbow plot). Despite the discrepancy, the decision was made to opt for 4 clusters for both decades to make comparisons easier between the two decades. 
 
@@ -149,29 +149,29 @@ We created an elbow plot and a silhouette plot for each decade to evaluate clust
 
 ![](images/Silhouette_Plot_Decade1-03.png){width="481"}
 
-~Elbow\ and\ Silhouette\ Plots\ -\ Decade\ 1,\ **Figure\ 7**~
+~Elbow and Silhouette Plots - Decade 1, **Figure 7**~
 
 ![](images/Elbow_Plot_Decade2-02.png){width="479"}
 
 ![](images/Silhouette_Plot_Decade2-03.png){width="481"}
 
-~Elbow\ and\ Silhouette\ Plots\ -\ Decade\ 2,\ **Figure\ 8**~
+~Elbow and Silhouette Plots - Decade 2, **Figure 8**~
 
 To visualize the 4 clusters per decade, scatter plots were generated, aligning with the PCA results. Each plot graphed 4 NBA player categories against 2 principal components. Generally, PC1 exhibited more loading on offensive statistics (FGA, 3PA, 2PA), while PC2 emphasized rebounding and defensive statistics (TRB, BLK, FG%). The details of these plots provide a good understanding of the play style clusters across the two decades.
 
 ![](images/Cluster_Analysis_Scatter_Plot_Decade1-01.png)
 
-~Cluster\ Scatter\ Plot\ -\ Decade\ 1,\ **Figure\ 9**~
+~Cluster Scatter Plot - Decade 1, **Figure 9**~
 
 ![](images/Cluster_Analysis_Scatter_Plot_Decade2-01.png)
 
-~Cluster\ Scatter\ Plot\ -\ Decade\ 2,\ **Figure\ 10**~
+~Cluster Scatter Plot - Decade 2, **Figure 10**~
 
 To derive meaningful interpretations for each cluster, we calculated the mean for each statistic within each cluster, as presented in Table 7 and Table 8.
 
 ![](https://lh7-us.googleusercontent.com/JrUbAv_h7ma7oHBc1QjKH9RReWDYyQA4dyfS1zLNEWIhLWmEIsl2z7vgBtAVFIoJj9xcI9c0MQByD_ZgLsCWEJbuZtVgb8rDzFiyjo36wczoeECgC4cSMaeGZcRk5W8sqqD2UBCnEksTqhRh4BR_q5Y)
 
-~Cluster\ Averages\ Table\ -\ Decade\ 1,\ **Table\ 7**~
+~Cluster Averages Table - Decade 1, **Table 7**~
 
 Here are the interpretations for each cluster in Decade 1.
 
@@ -197,7 +197,7 @@ Big Man (Cluster 3)
 
 ![](images/clipboard-3331446244.png)
 
-~Cluster\ Averages\ Table\ -\ Decade\ 2,\ **Table\ 8**~
+~Cluster Averages Table - Decade 2, **Table 8**~
 
 Here are the interpretations for each cluster in Decade 2.
 
