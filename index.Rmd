@@ -43,7 +43,7 @@ Therefore, based on the literature, our research hypothesis is as follows:
 
 We obtained NBA player statistics from the Basketball-Reference website, focusing on 23 key performance indicators (KPIs) listed in Section 1.2. Utilizing a Python program, we web-scraped data spanning the 1998-99 to 2021-22 seasons.
 
-Several columns (FG%, 3P%, 2P%, FT%, and eFG%) had missing values due to #DIV/0 errors, which we opted not to fill with mean values to preserve performance integrity. Our analysis centers on playstyles, so we assessed players with a significant number of games, setting a lower limit of 22 games (25th percentile of GP). To ensure meaningful analysis, players averaging zero field goals (FG) or playing more than 82 games in a season were excluded.
+Several columns (FG%, 3P%, 2P%, FT%, and eFG%) had missing values due to #DIV/0 errors, which we opted not to fill with mean values to preserve performance integrity. Our analysis centers on playstyles, so we assessed players with a significant number of games, setting a lower limit of 22 games played (25th percentile of GP). To ensure meaningful analysis, players averaging zero field goals (FG) or playing more than 82 games in a season were excluded.
 
 The Position column revealed 17 positions, with 12 being hybrid (ex. PF-C, PG-SG). The Team column introduced "TOT," representing combined statistics for players on multiple teams. To address these complexities, we created four data frames:
 
@@ -125,7 +125,7 @@ To visually present our findings to the audience, we created time-series graphs 
 
 In the exploration of play styles, we conducted a cluster analysis to classify players based on personal performance. To aid in the subsequent analysis, we performed dimensionality reduction using Principal Component Analysis (PCA).
 
-For Decade 1 (2000-2009), PC1 revealed substantial loading on offensive metrics (e.g., FG, PTS, 2P, FT), as outlined in Table 3. PC2 highlighted significant loading on rebounding, defensive metrics, and shooting percentages (e.g., ORB, TRB, BLK, FG%), as outlined in Table 4.
+For Decade 1 (2000-2009), PC1 revealed substantial loading on offensive metrics (e.g., FG, PTS, 2P, FT), as outlined in Table 3. PC2 highlighted significant loading on rebounding, defensive metrics, and shooting percentages (e.g., ORB, TRB, BLK, FG%), also outlined in Table 3.
 
 ![](images/PCALoadingsD1.png){width="307"}
 
