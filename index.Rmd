@@ -159,7 +159,7 @@ We created an elbow plot and a silhouette plot for each decade to evaluate clust
 
 ~Elbow and Silhouette Plots - Decade 2, **Figure 8**~
 
-To visualize the 4 clusters per decade, scatter plots were generated, aligning with the PCA results. Each plot graphed 4 NBA player categories against 2 principal components. Generally, PC1 exhibited more loading on offensive statistics (FGA, 3PA, 2PA), while PC2 emphasized rebounding and defensive statistics (TRB, BLK, FG%). The details of these plots provide a good understanding of the play style clusters across the two decades.
+To visualize the 4 clusters per decade, scatter plots were generated, aligning with the PCA results. Each plot graphed NBA players against 2 principal components, and categorized them into 4 different clusters. Generally, PC1 exhibited more loading on offensive statistics (FGA, 3PA, 2PA), while PC2 emphasized rebounding and defensive statistics (TRB, BLK, FG%). The details of these plots provide a good understanding of the play style clusters across the two decades.
 
 ![](images/Cluster_Analysis_Scatter_Plot_Decade1.png)
 
@@ -220,7 +220,7 @@ Here are the interpretations for each cluster in Decade 2.
 -   Players in Cluster 3 led averages for BLK, TRB, and 2P% and came 2nd for 2PA, FTA.
 -   Lacking in 3P and FT shooting accuracy (16.6%) and (68.7%)
 
-In general, roles in the NBA have remained consistent across both Decade 1 and Decade 2, featuring distinct clusters like Lead Scorer, Big Man, and Sharpshooter. However, players are showcasing versatility beyond traditional positions. In Decade 2, the 'Big Man' cluster stands out with higher averages in assists, 3PA, and a 4% increase in 3P% compared to Decade 1. The 'Sharpshooter' cluster in Decade 2 exhibits higher total rebounds and blocks averages. Across all clusters, there's a noticeable increase in average 3PA. These observations suggest a shift in traditional role responsibilities and skill sets.
+In general, roles in the NBA have remained consistent across both Decade 1 and Decade 2, featuring distinct clusters like Lead Scorer, Big Man, and Sharpshooter. However, players are showcasing versatility beyond traditional positions. In Decade 2, the 'Big Man' cluster stands out with higher averages in assists (AST), 3PA, and a 4% increase in 3P% compared to Decade 1. The 'Sharpshooter' cluster in Decade 2 exhibits higher total rebounds (TRB) and blocks (BLK) averages. Across all clusters, there's a noticeable increase in average 3PA. These observations suggest a shift in traditional role responsibilities and skill sets.
 
 ## Discussion
 
